@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+
+@theme {
+  --font-display: "Cascadia Code", "sans-serif";
+  --font-display2: "Battambang", "cursive";
+  --color-own-1: oklch(29.23% 0 0);
+  --color-own-2: oklch(79.58% 0.171 83.42);
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--color-own-1);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: var(--color-own-1);
+  }
+}
+
+html{
+  scroll-behavior: smooth;
+}
