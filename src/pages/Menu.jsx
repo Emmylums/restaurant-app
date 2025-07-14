@@ -8,6 +8,7 @@ import { faSearch, faShoppingCart, faPlus, faMinus } from "@fortawesome/free-sol
 import AlertBanner from "../components/AlertBanner";
 import { useCart } from "../context/CartContext";
 import allDishes from "../data/alldishes";
+import Footer from "../components/Footer";
 
 export default function Menu() {
   const [mobileNavBarVisible, setMobileNavBarVisible] = useState(false);
@@ -165,6 +166,7 @@ function RowWithAnimation({
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
+    <>
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
@@ -221,5 +223,7 @@ function RowWithAnimation({
         </motion.div>
       ))}
     </motion.div>
+    <Footer/>
+    </>
   );
 }

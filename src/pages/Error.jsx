@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import NavBar from '../components/NavBar';
 import MobileNavBar from '../components/MobileNavBar';
+import Footer from '../components/Footer';
 
 const Error = ({ statusCode = 500, message = "Something went wrong" }) => {
     const [mobileNavBarVisible, setMobileNavBarVisible] = useState(false);
@@ -33,6 +34,7 @@ const Error = ({ statusCode = 500, message = "Something went wrong" }) => {
                     </motion.div>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };

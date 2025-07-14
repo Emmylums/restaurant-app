@@ -2,6 +2,7 @@ import {useState} from "react";
 import NavBar from "../components/NavBar";
 import MobileNavBar from "../components/MobileNavBar";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 export default function Signup() {
     const [mobileNavBarVisible, setMobileNavBarVisible] = useState(false);
@@ -48,6 +49,7 @@ export default function Signup() {
                 </section>
             </main>
         </div>
+        <Footer/>
     </>
   );
 }

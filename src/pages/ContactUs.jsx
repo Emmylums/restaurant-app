@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NavBar from "../components/NavBar";
 import MobileNavBar from "../components/MobileNavBar";
 import { motion } from 'framer-motion';
+import Footer from "../components/Footer";
 
 export default function ContactUs() {
   const [mobileNavBarVisible, setMobileNavBarVisible] = useState(false);
@@ -80,6 +81,7 @@ export default function ContactUs() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

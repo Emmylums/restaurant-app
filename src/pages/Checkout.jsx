@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useCart } from "../context/CartContext";
 import AlertBanner from "../components/AlertBanner";
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
 
 export default function Checkout() {
   const [mobileNavBarVisible, setMobileNavBarVisible] = useState(false);
@@ -140,6 +141,7 @@ export default function Checkout() {
           </p>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

@@ -8,6 +8,7 @@ import { faCartShopping, faPlus, faTrashCan } from "@fortawesome/free-solid-svg-
 import allDishes from "../data/allDishes.js";
 import AlertBanner from "../components/AlertBanner";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer.jsx";
 
 export default function Cart() {
   const [mobileNavBarVisible, setMobileNavBarVisible] = useState(false);
@@ -165,6 +166,7 @@ export default function Cart() {
           </>
         )}
       </div>
+      <Footer/>
     </>
   );
 }

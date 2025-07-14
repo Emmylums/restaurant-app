@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 import TestimonialSlider from "../components/TestimonialSlider";
 import MotionWrapper from "../components/MotionWrapper";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 
 export default function Home() {
@@ -88,13 +89,13 @@ export default function Home() {
                         </motion.div>
                     </div>
                 </section>
-                <section className=" w-full  bg-white mx-auto overflow-hidden h-[90vh] py-10 px-6 flex flex-col items-center justify-center">
+                <section className=" w-full bg-white mx-auto overflow-hidden pt-10 pb- px-6 flex flex-col items-center justify-center relative">
                     <div className="mb-5">
                         <h2 className="animate-bounce text-2xl font-semibold text-center text-black font-display">Featured Dishes</h2>
                     </div>
-                    <motion.div className="relative w-full h-full" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.15 }}>
+                    <motion.div className="relative w-full h-[60vh]" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.15 }} >
                         {slides.map((slide, index) => (
-                            <div key={index} className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out ${index === currentIndex ? "opacity-100 z-20" : "opacity-0 z-10"}`}>
+                            <div key={index} className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out ${index === currentIndex ? "opacity-100 z-20" : "opacity-0 z-10"}`} >
                                 <div className={`relative h-[60vh] min-w-full bg-left bg-cover ${slide.url}`}>
                                     <div className="absolute inset-0 opacity-70 bg-black" />
                                     <div className="relative flex items-center justify-center h-full">
@@ -104,15 +105,14 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </div>
-                                <Link to="/Menu">
-                                    <div className="pt-5">
-                                        <button className="bg-own-2 text-black text-sm px-7 py-4 rounded-md flex items-center justify-center gap-3 tracking-wide">Order Now <FontAwesomeIcon className="text-xs" icon={faArrowRight}/></button>
-                                    </div>
-                                </Link>
                             </div>
                         ))}
                     </motion.div>
-
+                    <Link to="/Menu">
+                        <div className="py-5">
+                            <button className="bg-own-2 text-black text-sm px-7 py-4 rounded-md flex items-center justify-center gap-3 tracking-wide">Order Now <FontAwesomeIcon className="text-xs" icon={faArrowRight}/></button>
+                        </div>
+                    </Link>
                 </section>
                 <section className="flex flex-col-reverse px-6 py-10 bg-own-2 text-black">
                     <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.15 }}>
@@ -143,6 +143,7 @@ export default function Home() {
                 </section>
             </main>
         </div>
+        <Footer/>
     </>
   );
 }

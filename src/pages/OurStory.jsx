@@ -5,6 +5,7 @@ import cooking from "../assets/cooking.png";
 import { useState } from "react";
 import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 export default function OurStory() {
     const [mobileNavBarVisible, setMobileNavBarVisible] = useState(false);
@@ -81,6 +82,7 @@ export default function OurStory() {
                     </button>
                 </Link>
             </div>
+            <Footer/>
         </>
     );
 }
