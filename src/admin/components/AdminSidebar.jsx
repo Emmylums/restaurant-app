@@ -25,7 +25,7 @@ const AdminSideBar = ({ isOpen, activeLink, closeSidebar, className }) => {
 
   return (
     <>
-      <div onClick={closeSidebar} className={`${isOpen ? "bg-black/40 backdrop-blur-sm z-50 fixed top-0 w-full h-screen" : ""}`}></div>
+      <div onClick={closeSidebar} className={`${isOpen ? "bg-black/50 backdrop-blur-sm z-50 fixed top-0 w-full h-screen" : ""}`}></div>
       <div
         className={`md:hidden landscape:hidden fixed  top-0 w-64 h-screen px-5 bg-own-1 text-[#dfe3e7] transform ${
           isOpen  ? "translate-x-0" : "translate-x-[-320px]"

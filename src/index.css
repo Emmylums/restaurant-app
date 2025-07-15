@@ -3,7 +3,8 @@
 
 @theme {
   --font-display: "Cascadia Code", "sans-serif";
-  --font-display2: "Battambang", "cursive";
+  --font-display2: "Ubuntu", "sans-serif";
+  --font-display3: "Oswald", "sans-serif";
   --color-own-1: oklch(29.23% 0 0);
   --color-own-2: oklch(79.58% 0.171 83.42);
 }
