@@ -53,16 +53,16 @@ const NavBar = ({onToggleMobileNavBar, activeLink}) => {
 
     return(
             <Element name="top">
-                <header className={`select-none w-full flex justify-between items-center transition-all duration-100 ease-in z-40 lg:px-16 px-5 text-white ${isSticky ? `bg-black py-4 shadow-lg ${showBackground ? "fixed" : "absolute"}` : "bg-transparent py-7 absolute"}`}>
-                    <Link to="/" smooth="true" duration={700} className=" flex lg:text-2xl md:text-xl md:w-auto landscape:w-1/3 w-3/6 text-lg space-x-4 leading-tight text-left font-black items-center cursor-pointer">
+                <header className={`select-none w-full flex justify-between items-center transition-all duration-100 ease-in z-40 lg:px-16 px-5 text-white ${isSticky ? `bg-black py-4 shadow-lg ${showBackground ? "fixed" : "absolute"}` : "bg-transparent py-7 landscape:py-4 landscape:md:py-7 absolute"}`}>
+                    <Link to="/" smooth="true" duration={700} className=" flex lg:text-2xl sm:text-xl sm:w-auto landscape:w-1/3 w-3/6 text-lg space-x-4 leading-tight text-left font-black items-center cursor-pointer">
                         <img src={logo} alt="Original Logo" className="w-24"/>
                     </Link>
-                    <div className="md:hidden landscape:hidden">
+                    <div className="sm:hidden landscape:hidden">
                         <button className="text-white text-3xl" onClick={onToggleMobileNavBar}>
                             <FontAwesomeIcon icon={faBars}/>
                         </button>
                     </div>
-                    <nav className="md:flex landscape:flex lg:space-x-6 md:space-x-1 landscape:space-x-1 lg:text-lg font-bold hidden tracking-wide">
+                    <nav className="sm:flex landscape:flex lg:space-x-6 sm:space-x-1 landscape:space-x-1 md:text-xl font-bold hidden tracking-wide">
                         {menuItems.map((item) => (
                             <Link to={`/${item.name}`} key={item.name} smooth="true" duration={700} onClick={action}><p className={`hover:text-own-2  pt-2 px-2 pb-1.5 transition duration-500 ease-in-out cursor-pointer ${
                                 activeTab === item.name

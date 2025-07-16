@@ -70,20 +70,20 @@ export default function Home() {
     <>
         <NavBar activeLink="Home" onToggleMobileNavBar={() => setMobileNavBarVisible(!mobileNavBarVisible)}/>
         
-        <MobileNavBar isVisible={mobileNavBarVisible} activeLink="Home" onClose={() => setMobileNavBarVisible(false)} className="md:col-span-1 pt-7"/>
+        <MobileNavBar isVisible={mobileNavBarVisible} activeLink="Home" onClose={() => setMobileNavBarVisible(false)} className="sm:col-span-1 pt-7"/>
         <div>
             <main>
                 <section className="relative bg-[url(./assets/background6.jpg)] h-screen bg-center bg-cover">
                     <div className="absolute inset-0 h-screen opacity-70 bg-black" />
                     <div className="relative flex items-center justify-center h-full">
                         <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0 }}>
-                            <div className="p-10 text-center text-white mt-10 ">
-                                <h2 className="font-display font-bold text-4xl">Welcome to <br /> Ada’s Kitchen </h2>
-                                <h3 className="font-semibold text-2xl pt-5"> A Taste of Nigeria’s <br /> Finest Flavors</h3>
-                                <h4 className="pt-2">Savor Authentic Nigerian Cuisine, Crafted with Love & Tradition</h4>
+                            <div className="p-10 text-center text-white mt-10">
+                                <h2 className="font-display font-bold text-3xl sm:text-5xl md:font-black md:text-6xl">Welcome to <br /> Ada’s Kitchen </h2>
+                                <h3 className="font-semibold text-2xl pt-5 landscape:text-xl px-7 sm:text-3xl sm:pt-14 sm:px-[20%] landscape:sm:text-2xl landscape:sm:px-0 md:text-5xl md:font-semibold md:px-[15%]"> A Taste of Nigeria’s Finest Flavors</h3>
+                                <h4 className="pt-2 landscape:text-sm sm:text-xl sm:px-[15%] sm:pt-5 landscape:sm:text-base md:text-2xl">Savor Authentic Nigerian Cuisine, Crafted with Love & Tradition</h4>
 
                                 <Link to="/Menu">
-                                    <button className="bg-own-2 mt-14 text-black text-lg font-semibold p-4 rounded-md">Order Now</button>
+                                    <button className="bg-own-2 mt-14 text-black text-lg font-semibold p-4 tracking-wider rounded-md landscape:mt-8 landscape:px-3 landscape:py-3 sm:text-2xl sm:p-6 landscape:sm:text-xl landscape:sm:p-5 sm:rounded-md md:text-3xl md:p-9 md:rounded-xl">Order Now</button>
                                 </Link>
                             </div>
                         </motion.div>
@@ -128,11 +128,11 @@ export default function Home() {
                             <button className="bg-black text-own-2 text-sm px-6 py-4 rounded-md tracking-wide">Learn More</button>
                         </Link>
                     </motion.div>
-                    <motion.div initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.3 }}className="md:w-1/2">
+                    <motion.div initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.3 }}className="sm:w-1/2">
                         <img src={jollof} alt="Jollof Rice" className="rounded-lg" />
                     </motion.div>
                 </section>
-                <section className="py-10 px-4 md:px-6 bg-white">
+                <section className="py-10 px-4 sm:px-6 bg-white">
                     <MotionWrapper direction="up">
                         <h2 className="text-2xl font-semibold text-center text-black font-display mb-5">Testimonials</h2>
                     </MotionWrapper>

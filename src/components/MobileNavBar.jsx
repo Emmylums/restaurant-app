@@ -28,13 +28,13 @@ const MobileNavBar = ({ isVisible, activeLink, onClose, className }) => {
 
       </div>
       <div
-        className={`md:hidden landscape:hidden fixed right-0 top-0 w-64 h-screen px-5 bg-own-1 text-[#dfe3e7] transform ${
+        className={`sm:hidden landscape:hidden fixed right-0 top-0 w-64 h-screen px-5 bg-own-1 text-[#dfe3e7] transform ${
           isVisible ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-500 z-50 ${className}`}
       >
         <div className="flex justify-between items-center px-4 mb-8">
           <h2 className="text-xl font-bold">Menu</h2>
-          <button className="md:hidden landscape:hidden text-xl" onClick={onClose}>
+          <button className="sm:hidden landscape:hidden text-xl" onClick={onClose}>
             <FontAwesomeIcon icon={faClose} />
           </button>
         </div>
