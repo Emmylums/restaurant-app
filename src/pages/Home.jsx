@@ -78,12 +78,12 @@ export default function Home() {
                     <div className="relative flex items-center justify-center h-full">
                         <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0 }}>
                             <div className="p-10 text-center text-white mt-10">
-                                <h2 className="font-display font-bold text-3xl sm:text-5xl md:font-black md:text-6xl">Welcome to <br /> Ada’s Kitchen </h2>
-                                <h3 className="font-semibold text-2xl pt-5 landscape:text-xl px-7 sm:text-3xl sm:pt-14 sm:px-[20%] landscape:sm:text-2xl landscape:sm:px-0 md:text-5xl md:font-semibold md:px-[15%]"> A Taste of Nigeria’s Finest Flavors</h3>
-                                <h4 className="pt-2 landscape:text-sm sm:text-xl sm:px-[15%] sm:pt-5 landscape:sm:text-base md:text-2xl">Savor Authentic Nigerian Cuisine, Crafted with Love & Tradition</h4>
+                                <h2 className="font-display font-bold text-3xl sm:text-5xl landscape:text-3xl md:font-black md:text-6xl landscape:lg:text-5xl">Welcome to <br /> Ada’s Kitchen </h2>
+                                <h3 className="font-semibold text-2xl pt-5 landscape:text-xl px-7 sm:text-3xl sm:pt-14 landscape:pt-5 sm:px-[20%] landscape:px-0 md:text-4xl md:font-semibold md:px-[15%] landscape:lg:text-3xl landscape:lg:pt-14"> A Taste of Nigeria’s Finest Flavors</h3>
+                                <h4 className="pt-2 landscape:text-sm sm:text-xl sm:px-[15%] sm:pt-5 md:text-2xl landscape:lg:pt-7 landscape:lg:text-lg">Savor Authentic Nigerian Cuisine, Crafted with Love & Tradition</h4>
 
                                 <Link to="/Menu">
-                                    <button className="bg-own-2 mt-14 text-black text-lg font-semibold p-4 tracking-wider rounded-md landscape:mt-8 landscape:px-3 landscape:py-3 sm:text-2xl sm:p-6 landscape:sm:text-xl landscape:sm:p-5 sm:rounded-md md:text-3xl md:p-9 md:rounded-xl">Order Now</button>
+                                    <button className="bg-own-2 mt-14 text-black text-lg font-semibold p-4 tracking-wider landscape:tracking-normal rounded-md landscape:lg:mt-8 landscape:mt-4 landscape:px-3 landscape:py-3 sm:text-2xl  sm:p-6 landscape:text-lg landscape:p-3 sm:rounded-md md:text-3xl md:p-9 md:rounded-xl landscape:rounded-md landscape:lg:rounded-xl landscape:lg:text-2xl landscape:lg:p-5 landscape:lg:tracking-wider">Order Now</button>
                                 </Link>
                             </div>
                         </motion.div>
