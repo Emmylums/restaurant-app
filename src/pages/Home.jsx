@@ -99,9 +99,9 @@ export default function Home() {
                                 <div className={`relative h-[60vh] min-w-full bg-left bg-cover ${slide.url}`}>
                                     <div className="absolute inset-0 opacity-70 bg-black" />
                                     <div className="relative flex items-center justify-center h-full">
-                                        <div className="p-5 text-center text-white ">
+                                        <div className="p-5 text-center text-white flex flex-col items-center ">
                                             <h2 className="font-display font-bold text-3xl">{slide.title}</h2>
-                                            <h3 className="font-semibold pt-6">{slide.description}</h3>
+                                            <h3 className="font-semibold pt-6 md:w-[70%] lg:w-[60%] text-center">{slide.description}</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -114,10 +114,10 @@ export default function Home() {
                         </div>
                     </Link>
                 </section>
-                <section className="flex flex-col-reverse px-6 py-10 bg-own-2 text-black">
-                    <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.15 }}>
-                        <h2 className="text-2xl font-semibold pt-10 font-display2">Our Story</h2>
-                        <p className="text-sm py-4 tracking-wide text-justify">
+                <section className="flex flex-col-reverse md:flex-row md:justify-between md:items-center md:gap-6 landscape:flex-row landscape:justify-between landscape:items-center landscape:gap-6 px-6 py-10 bg-own-2 text-black">
+                    <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.15 }} className="md:w-[50%] lg:w-[60%] landscape:w-[50%] landscape:lg:w-[60%]">
+                        <h2 className="text-2xl font-semibold pt-10 md:pt-0 landscape:pt-0 font-display2">Our Story</h2>
+                        <p className="text-sm py-4 tracking-wide text-justify md:text-base">
                             At Ada’s Kitchen, our journey began with a simple yet powerful idea: to create delicious, wholesome meals that honor tradition while embracing modern tastes. Named after the matriarch of our family, Ada, whose love for cooking brought people together, we strive to keep her spirit alive in every dish we serve. <br /> <br />
 
                             Ada’s recipes were more than just food. They were a celebration of culture, warmth, and connection. From her cozy home kitchen to yours, we’ve preserved her timeless flavors while adding our own creative twist. Every bite tells a story of heritage, passion, and the joy of sharing good food with good company. <br /> <br />
@@ -128,7 +128,7 @@ export default function Home() {
                             <button className="bg-black text-own-2 text-sm px-6 py-4 rounded-md tracking-wide">Learn More</button>
                         </Link>
                     </motion.div>
-                    <motion.div initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.3 }}className="sm:w-1/2">
+                    <motion.div initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.3 }}className="sm:w-1/2 md:w-[50%] lg:w-[40%] landscape:w-[50%] landscape:lg:w-[40%]">
                         <img src={jollof} alt="Jollof Rice" className="rounded-lg" />
                     </motion.div>
                 </section>

@@ -82,73 +82,76 @@ export default function Menu() {
   }
 
   return (
-    <div>
-      {alert.visible && (
-        <AlertBanner message={alert.message} type={alert.type} onClose={() => setAlert({ ...alert, visible: false })} />
-      )}
+    <>
+      <div>
+        {alert.visible && (
+          <AlertBanner message={alert.message} type={alert.type} onClose={() => setAlert({ ...alert, visible: false })} />
+        )}
 
-      <NavBar activeLink="Menu" onToggleMobileNavBar={() => setMobileNavBarVisible(!mobileNavBarVisible)} />
-      <MobileNavBar isVisible={mobileNavBarVisible} activeLink="Menu" onClose={() => setMobileNavBarVisible(false)} className="md:col-span-1 pt-7" />
+        <NavBar activeLink="Menu" onToggleMobileNavBar={() => setMobileNavBarVisible(!mobileNavBarVisible)} />
+        <MobileNavBar isVisible={mobileNavBarVisible} activeLink="Menu" onClose={() => setMobileNavBarVisible(false)} className="md:col-span-1 pt-7" />
 
-      {/* Floating Cart Icon */}
-      <div className="fixed bottom-28 right-5 z-50">
-        <Link to="/cart" className="relative bg-own-2 p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300">
-          <FontAwesomeIcon icon={faShoppingCart} />
-          {getTotalItems() > 0 && (
-            <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full font-bold shadow-lg">
-              {getTotalItems()}
-            </div>
-          )}
-        </Link>
-      </div>
-
-      {/* Hero Section */}
-      <section className="relative bg-[url(./assets/background4.jpg)] h-[50vh] bg-center bg-cover">
-        <div className="absolute inset-0 h-[50vh] opacity-70 bg-black" />
-        <div className="relative flex items-center justify-center h-full">
-          <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0 }}>
-            <div className="p-10 text-center text-white mt-10">
-              <h2 className="font-display tracking-widest font-black text-4xl drop-shadow-lg drop-shadow-black">MENU</h2>
-            </div>
-          </motion.div>
+        {/* Floating Cart Icon */}
+        <div className="fixed bottom-28 right-5 z-50">
+          <Link to="/cart" className="relative bg-own-2 p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300">
+            <FontAwesomeIcon icon={faShoppingCart} />
+            {getTotalItems() > 0 && (
+              <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full font-bold shadow-lg">
+                {getTotalItems()}
+              </div>
+            )}
+          </Link>
         </div>
-      </section>
 
-      {/* Search Bar */}
-      <div className="max-w-4xl mx-auto pt-12 px-4 sm:px-6 lg:px-8 text-white">
-        <div className="flex justify-center">
-          <div className="relative w-full md:w-2/3">
-            <input
-              type="text"
-              placeholder="Search for dishes..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-6 py-4 pr-14 rounded-full border border-own-2 focus:ring-own-2 focus:ring-2 text-lg shadow-md placeholder:text-white"
-            />
-            <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
-              <FontAwesomeIcon icon={faSearch} className="w-5 h-5" />
+        {/* Hero Section */}
+        <section className="relative bg-[url(./assets/background4.jpg)] h-[50vh] bg-center bg-cover">
+          <div className="absolute inset-0 h-[50vh] opacity-70 bg-black" />
+          <div className="relative flex items-center justify-center h-full">
+            <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0 }}>
+              <div className="p-10 text-center text-white mt-10">
+                <h2 className="font-display tracking-widest font-black text-4xl drop-shadow-lg drop-shadow-black">MENU</h2>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Search Bar */}
+        <div className="max-w-4xl mx-auto pt-12 px-4 sm:px-6 lg:px-8 text-white">
+          <div className="flex justify-center">
+            <div className="relative w-full md:w-2/3">
+              <input
+                type="text"
+                placeholder="Search for dishes..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-6 py-4 pr-14 rounded-full border border-own-2 focus:ring-own-2 focus:ring-2 text-lg shadow-md placeholder:text-white"
+              />
+              <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+                <FontAwesomeIcon icon={faSearch} className="w-5 h-5" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Menu Items */}
-      <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-        {rows.map((row, index) => (
-          <RowWithAnimation
-            key={index}
-            row={row}
-            quantities={quantities}
-            increaseQuantity={increaseQuantity}
-            decreaseQuantity={decreaseQuantity}
-            handleInputChange={handleInputChange}
-            handleInputBlur={handleInputBlur}
-            handleAddToCart={handleAddToCart}
-            renderStars={renderStars}
-          />
-        ))}
+        {/* Menu Items */}
+        <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+          {rows.map((row, index) => (
+            <RowWithAnimation
+              key={index}
+              row={row}
+              quantities={quantities}
+              increaseQuantity={increaseQuantity}
+              decreaseQuantity={decreaseQuantity}
+              handleInputChange={handleInputChange}
+              handleInputBlur={handleInputBlur}
+              handleAddToCart={handleAddToCart}
+              renderStars={renderStars}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+      <Footer/>
+    </>
   );
 }
 
@@ -172,7 +175,7 @@ function RowWithAnimation({
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8 }}
-      className="grid gap-10 pt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+      className="grid gap-10 pt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 landscape:md:grid-cols-2 landscape:lg:grid-cols-3"
     >
       {row.map((item, itemIndex) => (
         <motion.div
@@ -223,7 +226,7 @@ function RowWithAnimation({
         </motion.div>
       ))}
     </motion.div>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   );
 }
