@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import DashboardCard from '../components/DashboardCard';
 import AdminSideBar from '../components/AdminSidebar';
 import AdminNavBar from '../components/AdminNavbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,7 +19,7 @@ export default function ManagerDashboard() {
   return (
     <>
       <AdminNavBar toggleSidebar={toggleSidebars} isSideBarOpen={isSidebarOpen}/>
-      <AdminSideBar isOpen={isSidebarOpen} closeSidebar={closeSidebar} activeLink="Dashboard"/>
+      <AdminSideBar isOpen={isSidebarOpen} closeSidebar={closeSidebar} activeLink="/admin/Dashboard"/>
       <div className='md:flex md:justify-end'>
         <div className={`pt-32 px-5 ${isSidebarOpen ? "md:w-[70%] lg:w-[75%]" : "md:w-full"} transition-all duration-500`}>
           <div>
